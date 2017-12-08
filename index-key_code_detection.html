@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+</head>
+<body>
+<script>
+const pressed = [];
+const codes = "2018";
+
+window.addEventListener('keyup', e => {
+	//console.log(e.key);
+	pressed.push(e.key);
+	console.log(pressed);
+	pressed.splice(-codes.length - 1, pressed.length - codes.length);
+
+	if (pressed.join('').includes(codes)) {
+		console.log('ADD ANIMATIONS ADD ANIMATIONS ADD ANIMATIONS');
+	}
+
+
+});
+
+
+
+</script>
+
+</body>
+</html>
